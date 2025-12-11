@@ -48,7 +48,7 @@ def fibonacci(fibonacci_number):
 
     fibonacci_number = int(valor)
     
-    if not valor.is_integer():
+    if not fibonacci_number.is_integer():
         raise ValueError ("Ha d'introduir-se un número enter!")
 
     if fibonacci_number <0:

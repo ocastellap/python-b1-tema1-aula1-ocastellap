@@ -41,24 +41,27 @@ Exemple:
 
 def fibonacci(fibonacci_number):
     # Write here your code
+    if isinstance(fibonacci_number, str):
+        raise ValueError("El valor no pot ser una cadena")
+    
     try: 
         valor = float(fibonacci_number)
     except ValueError:
         raise ValueError ("Ha d'introduir-se un valor numèric!")
     
-    if not fibonacci_number.is_integer():
+    if not valor.is_integer():
         raise ValueError ("Ha d'introduir-se un número enter!")
-
-    fibonacci_number = int(valor)
     
-    if fibonacci_number <0:
+    num = int(valor)
+
+    if num <0:
         raise ValueError ("El número ha de ser igual o superior a 0")
-    elif fibonacci_number == 0:
+    elif num == 0:
         return 0
-    elif fibonacci_number == 1:
+    elif num == 1:
         return 1
     else:
-        return fibonacci(fibonacci_number-1) + fibonacci(fibonacci_numbernumero-2)
+        return fibonacci(num-1) + fibonacci(num-2)
    
     pass
 

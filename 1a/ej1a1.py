@@ -44,13 +44,13 @@ def fibonacci(fibonacci_number):
     try: 
         valor = float(fibonacci_number)
     except ValueError:
-        return "Ha d'introduir-se un valor numèric!"
+        raise ValueError ("Ha d'introduir-se un valor numèric!")
         
     if not valor.is_integer():
-        return "Ha d'introduir-se un número enter!"
+        raise ValueError ("Ha d'introduir-se un número enter!")
 
     if fibonacci_number <0:
-        return "El número ha de ser igual o superior a 0"
+        raise ValueError ("El número ha de ser igual o superior a 0")
     elif numero == 0:
         return 0
     elif numero == 1:

@@ -41,20 +41,25 @@ Exemple:
 
 def fibonacci(fibonacci_number):
     # Write here your code
-    if fibonacci_number.isdigit():
-        if fibonacci_number<0:
-            return 'El número ha de ser igual o superior a 0'
-        elif:
-            if numero == 0:
-                return 0
-            elif numero == 1:
-                return 1
-            else:
-                return fibonacci_recursivo(numero-1) + fibonacci_recursivo(numero-2)
+    try: 
+        valor = float(fibonacci_number)
+    except ValueError:
+        return "Ha d'introduir-se un valor numèric!"
+        
+    if not valor.is_integer():
+        return "Ha d'introduir-se un número enter!"
+
+    if fibonacci_number <0:
+        return "El número ha de ser igual o superior a 0"
+    elif numero == 0:
+        return 0
+    elif numero == 1:
+        return 1
     else:
-        return 'Ha d'introduir-se un valor numèric!!'
+        return fibonacci_recursivo(numero-1) + fibonacci_recursivo(numero-2)
+   
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
- print(fibonacci(10))
+print(fibonacci(10))

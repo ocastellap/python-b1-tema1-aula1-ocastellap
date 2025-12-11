@@ -45,7 +45,9 @@ def fibonacci(fibonacci_number):
         valor = float(fibonacci_number)
     except ValueError:
         raise ValueError ("Ha d'introduir-se un valor numèric!")
-        
+
+    fibonacci_number = int(valor)
+    
     if not valor.is_integer():
         raise ValueError ("Ha d'introduir-se un número enter!")
 

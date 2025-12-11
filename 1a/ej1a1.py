@@ -45,20 +45,20 @@ def fibonacci(fibonacci_number):
         valor = float(fibonacci_number)
     except ValueError:
         raise ValueError ("Ha d'introduir-se un valor numèric!")
-
-    fibonacci_number = int(valor)
     
     if not fibonacci_number.is_integer():
         raise ValueError ("Ha d'introduir-se un número enter!")
 
+    fibonacci_number = int(valor)
+    
     if fibonacci_number <0:
         raise ValueError ("El número ha de ser igual o superior a 0")
-    elif numero == 0:
+    elif fibonacci_number == 0:
         return 0
-    elif numero == 1:
+    elif fibonacci_number == 1:
         return 1
     else:
-        return fibonacci_recursivo(numero-1) + fibonacci_recursivo(numero-2)
+        return fibonacci(fibonacci_number-1) + fibonacci(fibonacci_numbernumero-2)
    
     pass
 

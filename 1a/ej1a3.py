@@ -33,6 +33,17 @@ Exemple:
 
 def invert_text(text_chain:str):
     # Write here your code
+    
+    text_invertit = "" # iniciar variable en blanc
+    
+    # comprovar que és un string
+    if not isinstance(text_chain,str):
+        raise ValueError ("Només pot contenir caràcters!")
+    
+    #invertir la cadena
+    text_invertit = text_chain[::-1]
+
+    return text_invertit
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 

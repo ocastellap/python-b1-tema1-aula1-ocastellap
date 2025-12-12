@@ -41,19 +41,23 @@ Exemple:
 
 def fibonacci(fibonacci_number):
     # Write here your code
+    # comprovar que no sigui un string
     if isinstance(fibonacci_number, str):
-        raise ValueError("El valor no pot ser una cadena")
-    
+        raise ValueError("El valor no pot ser una lletra")
+
+    # comprovar que sigui un número
     try: 
         valor = float(fibonacci_number)
     except ValueError:
         raise ValueError ("Ha d'introduir-se un valor numèric!")
-    
+
+    #comprovar que sigui un enter
     if not valor.is_integer():
         raise ValueError ("Ha d'introduir-se un número enter!")
-    
-    num = int(valor)
 
+    # passar a enter per poder operar
+    num = int(valor)
+    # comprovar que sigui més gran o igual a 0 i operar
     if num <0:
         raise ValueError ("El número ha de ser igual o superior a 0")
     elif num == 0:
@@ -67,4 +71,4 @@ def fibonacci(fibonacci_number):
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-print(fibonacci(10))
+# print(fibonacci(10))

@@ -35,6 +35,24 @@ Exemple:
 
 def count_vowels(text_chain:str):
     # Write here your code
+
+    vocals_list = ['a','e','i','o','u'] # creem una llista de vocals
+    vocals = 0                          # iniciem el contador a 0
+
+    # comprovem que sigui un string
+
+    if not isinstance(text_chain,str):
+        raise ValueError ("Només pot contenir caràcters!")
+    
+    # passem el text a minúscules
+    text_chain = text_chain.lower()
+
+    #comprovem si és a la llista i en cas afirmatiu sumem 1
+    for i in text_chain:
+        if i in vocals_list:
+            vocals +=1
+       
+    return vocals
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
